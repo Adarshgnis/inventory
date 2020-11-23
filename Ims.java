@@ -23,7 +23,7 @@ public class Ims {
         {
             for(int i=0;i<=100;i++)
             {
-                Thread.sleep(1);
+                Thread.sleep(32);
                 splashscreen.loadingnum.setText(Integer.toString(i)+"%");
                 splashscreen.loadingbar.setValue(i);
                 if(i==100)

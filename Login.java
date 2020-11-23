@@ -11,6 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 
+
 /**
  *
  * @author ADARSH
@@ -71,7 +72,7 @@ public class Login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        rightpanel.setBackground(new java.awt.Color(0, 153, 153));
+        rightpanel.setBackground(new java.awt.Color(28, 43, 45));
 
         signin.setFont(new java.awt.Font("Ink Free", 1, 48)); // NOI18N
         signin.setForeground(new java.awt.Color(255, 255, 255));
@@ -89,17 +90,20 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Password");
 
-        username.setBackground(new java.awt.Color(0, 153, 153));
+        username.setBackground(new java.awt.Color(28, 43, 45));
         username.setFont(new java.awt.Font("Ink Free", 1, 24)); // NOI18N
         username.setForeground(new java.awt.Color(255, 255, 255));
         username.setToolTipText("Username");
         username.setBorder(null);
+        username.setCaretColor(new java.awt.Color(255, 255, 255));
+        username.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
-        password.setBackground(new java.awt.Color(0, 153, 153));
+        password.setBackground(new java.awt.Color(28, 43, 45));
         password.setFont(new java.awt.Font("Ink Free", 1, 18)); // NOI18N
         password.setForeground(new java.awt.Color(255, 255, 255));
         password.setToolTipText("That's classified . If i tell you I'll have to kill you..");
         password.setBorder(null);
+        password.setCaretColor(new java.awt.Color(255, 255, 255));
         password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordActionPerformed(evt);
@@ -115,7 +119,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jRadioButton1.setBackground(new java.awt.Color(0, 153, 153));
+        jRadioButton1.setBackground(new java.awt.Color(28, 43, 45));
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setFont(new java.awt.Font("Ink Free", 1, 16)); // NOI18N
         jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -126,7 +130,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jRadioButton2.setBackground(new java.awt.Color(0, 153, 153));
+        jRadioButton2.setBackground(new java.awt.Color(28, 43, 45));
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("Ink Free", 1, 16)); // NOI18N
         jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -278,13 +282,13 @@ public class Login extends javax.swing.JFrame {
                 {
                     JOptionPane.showMessageDialog(null, "username and password matched");
                     if(userType == "owner_login"){
-                    Owner_home Owner_home = new Owner_home();
-                    Owner_home.setVisible(true);
+                    Owner_dashboard Dashboard = new Owner_dashboard();
+                    Dashboard.setVisible(true);
                     }
                     else{
                         //code to open Worker Screen
-                        Worker_home Worker_home = new Worker_home();
-                        Worker_home.setVisible(true);
+                        Workers_dashboard Workers_dashboard = new Workers_dashboard();
+                        Workers_dashboard.setVisible(true);
                     }
                     setVisible(false);
                 }
